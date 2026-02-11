@@ -1,0 +1,253 @@
+/* --- Variables y Reseteo --- */
+:root {
+    --color-text-green: #6B7556; /* Verde oliva del texto */
+    --color-text-pink: #C87D87;  /* Rosa del nombre */
+    --color-btn-bg: #C87D87;     /* Color de fondo de botones */
+    --font-serif: 'Lora', serif;
+    --font-script: 'Pinyon Script', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alice&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0; /* Fondo gris claro para la página web */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font-serif);
+    color: var(--color-text-green);
+}
+
+/* --- Contenedor Principal de la Invitación --- */
+.invitation-card {
+    width: 700px;
+    /* height: 840px; */
+    background-color: #fff;
+    position: relative; /* Necesario para posicionar elementos absolutos dentro */
+    overflow: hidden;   /* Para cortar las imágenes que sobresalgan */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px; /* Espaciado interno general */
+}
+
+/* --- Elementos Decorativos (Imágenes y Líneas) --- */
+.decoration {
+    position: absolute;
+    pointer-events: none; /* Evita que bloqueen clicks en botones si se superponen */
+    z-index: 1;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+    max-width: 300px; /* Ajustar según necesidad */
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+    max-width: 350px; /* Ajustar según necesidad */
+}
+.frase_p{
+    width: 329px;
+    height: 54px;
+    text-align: left;
+}
+/* Líneas punteadas laterales usando pseudo-elementos */
+.invitation-card::before,
+.invitation-card::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    bottom: 90px;
+    width: 2px;
+    border-left: 2px dashed #C87D87; /* Color rosa pálido punteado */
+    z-index: 0;
+}
+
+.invitation-card::before {
+    left: 40px;
+}
+
+.invitation-card::after {
+    right: 40px;
+}
+
+
+/* --- Tipografía y Secciones --- */
+
+/* Header */
+.invitation-header p {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    font-weight: 500;
+    margin-left: -296px;
+    font-family: "Alice", serif;
+}
+
+/* Main Content (Nombre y Conejo) */
+.baby-name {
+    font-family: var(--font-script);
+    font-size: 5rem;
+    color: var(--color-text-pink);
+    font-weight: normal;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sutil sombra como en la imagen */
+}
+
+/* Contenedor para centrar el SVG */
+.curved-text-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -20px; /* Ajuste negativo porque el arco ocupa espacio vertical */
+    z-index: 5;
+    position: relative;
+}
+
+/* Ajustes del SVG */
+.curved-text-container svg {
+    width: 350px; /* Ancho visual del título */
+    height: auto;
+    overflow: visible;
+}
+
+/* Estilos específicos del texto dentro del SVG */
+.curved-text {
+    font-size: 42px;                /* Tamaño de letra */
+    font-weight: 600;               /* Grosor */
+    fill: var(--color-text-green);  /* Color verde definido en tus variables */
+    letter-spacing: 6px;            /* Espacio entre letras para elegancia */
+    font-family: "Alegreya", serif;
+}
+
+/* Importante: aseguramos que las mayúsculas se vean bien */
+.curved-text {
+    font-variant: normal;
+}
+
+.rabbit-container {
+    margin-bottom: 30px;
+    z-index: 2; /* Asegurar que esté sobre las líneas punteadas */
+    position: relative;
+}
+
+.rabbit-img {
+    width: 180px; /* Ajustar tamaño del conejo */
+    height: auto;
+}
+
+/* Detalles (Fecha y Lugar) */
+.details {
+    margin-bottom: 40px;
+    z-index: 2;
+}
+
+.date-day {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.date-full {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.separator {
+    font-size: 1rem;
+    color: var(--color-text-pink);
+    opacity: 0.6;
+}
+
+.date-number {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.time {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.location-address p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+/* --- Botones --- */
+.actions {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    z-index: 10; /* Asegurar que los botones estén por encima de todo para ser clickeables */
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-btn-bg);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    min-width: 180px;
+    /* Degradado sutil para dar volumen como en la imagen */
+    background: linear-gradient(to bottom, #d49ca3, #c27680);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-icon {
+    width: 24px;
+    height: auto;
+    margin-right: 15px;
+    filter: brightness(0) invert(1); /* Vuelve blancos los iconos negros provistos */
+}
+
+.btn-text {
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+.invitation-footer p {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 5;
+    font-style: italic;
+}
