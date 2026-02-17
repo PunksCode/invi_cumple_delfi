@@ -135,7 +135,7 @@ body {
 
 /* Estilos específicos del texto dentro del SVG */
 .curved-text {
-    font-size: 42px;                /* Tamaño de letra */
+    font-size: 56px;              
     font-weight: 600;               /* Grosor */
     fill: var(--color-text-green);  /* Color verde definido en tus variables */
     letter-spacing: 6px;            /* Espacio entre letras para elegancia */
@@ -316,6 +316,12 @@ body {
     }
 }     
 @media screen and (max-width: 480px) {
+    .curved-text {
+        font-size: 48px;
+    }
+    .rabbit-img {
+        width: 170px;
+    }
     .btn{
         width: 120px;
     }
@@ -332,14 +338,8 @@ body {
     }
 }
 @media screen and (max-width: 400px) {
-    /* .invitation-card {
-        height: 100dvh;
-    } */
     .curved-text {
-        font-size: 48px;
-    }
-    .rabbit-img {
-        width: 150px;
+        font-size: 40px;
     }
     .details {
     margin-bottom: 10px;
