@@ -28,10 +28,10 @@ body {
 /* --- Contenedor Principal de la Invitación --- */
 .invitation-card {
     width: 700px;
-    /* height: 840px; */
+    height: auto;
     background-color: #fff;
     position: relative; /* Necesario para posicionar elementos absolutos dentro */
-    overflow: hidden;   /* Para cortar las imágenes que sobresalgan */
+    overflow: auto;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
@@ -39,7 +39,12 @@ body {
     text-align: center;
     padding: 40px; /* Espaciado interno general */
 }
-
+@supports (-webkit-touch-callout: none) {
+    .invitation-card {
+        height: 100dvh;  
+        min-height: 100dvh;
+    }
+}
 /* --- Elementos Decorativos (Imágenes y Líneas) --- */
 .decoration {
     position: absolute;
@@ -296,7 +301,8 @@ body {
     }
     .frase_p, .footer_p{
         font-size: 16px;
-    }
+        }
+}
 @media screen and (max-width: 500px){
     .date-day, .time, .location-address p{
         font-size: 18px;
@@ -315,6 +321,7 @@ body {
     }
     .actions{
         gap: 15px;
+        margin-bottom: 20px;
     }
     .btn-text{
         font-size: 8px;
@@ -324,4 +331,24 @@ body {
         font-size: 14px;
     }
 }
+@media screen and (max-width: 400px) {
+    /* .invitation-card {
+        height: 100dvh;
+    } */
+    .curved-text {
+        font-size: 48px;
+    }
+    .rabbit-img {
+        width: 150px;
+    }
+    .details {
+    margin-bottom: 10px;
+}
+    .date-day, .time, .location-address p{
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    .date-full{
+        font-size: 18px;
+    }
 }
