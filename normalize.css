@@ -1,0 +1,44 @@
+:root {
+  --color-text-green: #6B7556;
+  --color-text-pink: #C87D87;
+  --color-btn-bg: #C87D87;
+  --font-serif: 'Lora', serif;
+  --font-script: 'Pinyon Script', cursive;
+  --font-alice: 'Alice', serif;
+  --font-alegreya: 'Alegreya', serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #f5f5f5;
+  font-family: var(--font-alice);
+  color: var(--color-text-green);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}

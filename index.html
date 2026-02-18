@@ -1,29 +1,35 @@
-°<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitacion de Cumple De Delfi</title>
+    <title>Invitación de Cumple De Delfi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alice&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Alice&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="contenedor_principal">
     <main class="invitation-card">
-        <img src="assets/borde 2.png" alt="" class="decoration top-right">
-        <img src="assets/borde 1.png" alt="" class="decoration bottom-left">
-
-        <header class="invitation-header">
-                <p class="frase_p">Te invitamos a celebrar <span>el cumpleaños de nuestra bebe</span></p>
+        <header class="header" >
+            <div class="invitation-header">
+            <p class="frase_p">Te invitamos a celebrar <span>el cumpleaños de nuestra bebe</span></p>
+            <img src="assets/borde 2.png" alt="Flores decorativas" class="flores-superior">
+            </div>
+            <div class="name_cumple">
+            <h1 class="baby-name">Ámbar Delfina</h1>
+            </div>
         </header>
 
         <section class="main-content">
-            <h1 class="baby-name">Ámbar Delfina</h1>
             <div class="curved-text-container">
                 <svg viewBox="0 0 500 150">
                     <path id="curvePath" d="M 50,120 Q 250,20 450,120" fill="transparent"/>
-                    
                     <text class="curved-text">
                         <textPath href="#curvePath" startOffset="50%" text-anchor="middle">
                             Primer añito
@@ -31,7 +37,6 @@
                     </text>
                 </svg>
             </div>
-            
             <div class="rabbit-container">
                 <img src="assets/conejo_gusto1 1.png" alt="Conejito con flores" class="rabbit-img">
             </div>
@@ -41,7 +46,6 @@
             <p class="date-day">Domingo</p>
             <p class="date-full">Marzo <span class="separator">|</span> <span class="date-number">22</span> <span class="separator">|</span> 2026</p>
             <p class="time">17:00 hs a 20:00 hs</p>
-            
             <div class="location-address">
                 <p class="venue">Lugar: Salon Hashtags</p>
                 <p class="address">Teniente Farias 966</p>
@@ -50,22 +54,21 @@
 
         <section class="actions">
             <button id="btnConfirm" class="btn btn-primary">
-                <img src="assets/Vector (1).png" alt="Icono Teléfono" class="btn-icon">
+                <img class="icono" src="assets/Vector (1).png" alt="Icono Teléfono" class="btn-icon">
                 <span class="btn-text">Confirma tu asistencia</span>
             </button>
-
             <button id="btnLocation" class="btn btn-secondary">
-                <img src="assets/Vector.png" alt="Icono Ubicación" class="btn-icon">
+                <img class="icono" src="assets/Vector.png" alt="Icono Ubicación" class="btn-icon">
                 <span class="btn-text">Ver ubicación</span>
             </button>
         </section>
 
         <footer class="invitation-footer">
+            <img src="assets/borde 1.png" alt="Flores decorativas" class="flores-inferior">
             <p class="footer_p">Te esperamos no faltes!</p>
         </footer>
-
     </main>
-
+</div>
     <script src="script.js"></script>
 </body>
 </html>
