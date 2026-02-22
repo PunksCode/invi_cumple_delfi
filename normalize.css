@@ -1,13 +1,4 @@
-:root {
-  --color-text-green: #6B7556;
-  --color-text-pink: #C87D87;
-  --color-btn-bg: #C87D87;
-  --font-serif: 'Lora', serif;
-  --font-script: 'Pinyon Script', cursive;
-  --font-alice: 'Alice', serif;
-  --font-alegreya: 'Alegreya', serif;
-}
-
+/* normalize.css is now purely for reset */
 *,
 *::before,
 *::after {
