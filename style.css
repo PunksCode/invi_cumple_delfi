@@ -361,6 +361,11 @@
   .footer_p {
     font-size: 12px;
   }
+
+  .flores-inferior {
+    margin-left: -22px;
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -372,11 +377,6 @@
   .actions {
     gap: 15px;
     margin-bottom: 20px;
-  }
-
-  .flores-inferior {
-    margin-left: -30px;
-    margin-bottom: 10px;
   }
 }
 
@@ -390,10 +390,6 @@
   .location-address p {
     font-size: 16px;
     margin-bottom: 8px;
-  }
-
-  .footer_p {
-    margin-bottom: 12px;
   }
 
   .date-full {
